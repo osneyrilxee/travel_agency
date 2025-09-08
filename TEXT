@@ -1,0 +1,473 @@
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+import './App.css'
+import noPicture from "./assets/no_picture.png";
+import embedProjectImage from "./assets/pokesnipe-project.png";
+import pictureProfile from "./assets/italy.png";
+import htmlSvgLogo from "./assets/logo/html-svgrepo-com.svg";
+import cssSvgLogo from "./assets/logo/css-svgrepo-com.svg";
+import javascriptSvgLogo from "./assets/logo/javascript-svgrepo-com.svg";
+import pythonSvgLogo from "./assets/logo/python-svgrepo-com.svg";
+import rustSvgLogo from "./assets/logo/rust-svgrepo-com.svg";
+import reactSvgLogo from "./assets/logo/react-svgrepo-com.svg";
+import nextSvgLogo from "./assets/logo/nextjs-icon.svg";
+import viteSvgLogo from "./assets/logo/vite.svg";
+import githubSvgLogo from "./assets/logo/github-svgrepo-com.svg";
+import gitSvgLogo from "./assets/logo/git-svgrepo-com.svg";
+import redditSvgLogo from "./assets/logo/reddit-svgrepo-com.svg";
+import instagramSvgLogo from "./assets/logo/instagram-1-svgrepo-com.svg";
+// import figmaSvgLogo from "./assets/logo/figma-svgrepo-com.svg";
+import npmSvgLogo from "./assets/logo/npm-svgrepo-com.svg";
+import vscodeSvgLogo from "./assets/logo/vscode-svgrepo-com.svg";
+import pnpmSvgLogo from "./assets/logo/light-pnpm-svgrepo-com.svg";
+// import franceSvgLogo from "./assets/logo/flag-for-flag-france-svgrepo-com.svg";
+// import koreaSvgLogo from "./assets/logo/flag-for-flag-south-korea-svgrepo-com.svg";
+// import italySvgLogo from "./assets/logo/flag-for-flag-italy-svgrepo-com.svg";
+import { useEffect, useState } from "react";
+import "./main.js";
+
+
+
+function App() {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.example.com/data")
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+
+  return (
+      <div id="body">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"></meta>
+
+
+        <header>
+          <div className="header__title-text header__title-text--active">
+            <h1 id="header-title">Rilxee JJ</h1>
+            <p>Developer, Designer</p>
+          </div>
+
+          <nav>
+            <ul className="header__list header__list--active">
+              <li className="header__list-item header__list-item--active header__list-item--hover"><a href="#main-section-presentation">about me</a></li>
+              <li className="header__list-item header__list-item--active header__list-item--hover"><a href="#main-section-project">project</a></li>
+              <li className="header__list-item header__list-item--active header__list-item--hover"><a href="#main-section-my-stack">my stack</a></li>
+              {/* <li className="header__list-item header__list-item--active header__list-item--hover"><a href="#">contact</a></li> */}
+            </ul>
+          </nav>
+        </header>
+
+        <p id='text-information'>Website in building process</p>
+
+        <main>
+
+          <section id="main-section-presentation" className="main__section-welcoming main__section-welcoming--active">
+            <h2>about me.</h2>
+            <p id="section-welcoming-text--active">Rilxee JJ Creative Developer</p>
+            <div className="main__section-welcoming-text main__section-welcoming-text--active">
+              <div className="main__welcoming-profil main__welcoming-profil--active">
+                <img id="main-profile-picture" src={pictureProfile} alt="travel-agency project"/>
+                <div className="main__welcoming-profil-social-detail main__welcoming-profil-social-detail--active">
+                  <a href="https://github.com/osneyrilxee"><img id="main-github-picture" src={githubSvgLogo} alt="github logo" width={45}></img></a>
+                  <a href="https://www.instagram.com/osneyrilxee/"><img id="main-instagram-picture" src={instagramSvgLogo} alt="instagram logo" width={45}></img></a>
+                  <a href="https://www.reddit.com/user/osneyrilxee/"><img id="main-reddit-picture" src={redditSvgLogo} alt="reddit logo" width={45}></img></a>
+                </div>
+              </div>
+              <div className="main__welcoming-text main__welcoming-text--active">
+                <p>Hey, I'm <span className="informations-color-type--active">Rilxee</span><br></br>
+                  So I'm <span className="informations-color-type--active">17</span> and from <span className="informations-color-type--active">France</span>. I'm student <span className="informations-color-type--active">the day</span> and developer <span className="informations-color-type--active">the night</span>.<br></br>
+                  <br></br>
+                  I have a principle that is very <span className="informations-color-type--active">important </span>
+                  to me in <span className="informations-color-type--active">programming</span>:<br></br>
+                  <br></br>
+                  <i>"always strike a balance between aesthetics and functionality."</i>
+                  <br></br>
+                  <br></br>
+                  I am working on my career path to become a <a href="https://www.w3schools.com/whatis/whatis_fullstack.asp#:~:text=A%20full%2Dstack%20web%20developer,ASP%2C%20Python%2C%20or%20Node" target='_blank' className="informations-color-type--active">full-stack developer</a>.<br></br> 
+                  Then I will look into specializing in other areas, such as <a href="https://cloud.google.com/devops?gclsrc=aw.ds&gad_source=1&gad_campaignid=20642141972&gclid=CjwKCAjwiNXFBhBKEiwAPSaPCTEuNp3trx2xND2TLK9c2aP6EejQ9DSpLtuv1_oQvyCnJXwUWr4iFBoChSkQAvD_BwE" target='_blank' className="informations-color-type--active">DevOps</a>, for example.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="main-section-project" className="main__section-presentation main__section-presentation--active">
+            <h2 id="main-section-presentation">projects.</h2>
+            
+            <div className="main__container-project main__container-project--active">
+              
+              <div className="main__container-first-project main__container-project-global--active main__container-first-project--active">
+                <img className="main__projet-image main__project-image-first-container main__projet-image--active main__project-image-first-container--active" src={embedProjectImage} width={220} height={180} alt="pokesnipe project"/>
+                <div className="main__projet-text-container main__projet-text-container--active">
+                  <a className="main__link-style main__link-style--active" href="https://github.com/osneyrilxee/travel-agency.git" target="_blank">Pokesnipe - Project</a><br></br>
+                  <br></br>
+                  <p>This project is in building process for a boss company who would like to sell pokemon cards online!</p>
+                </div>
+              </div>
+
+              <div className="main__container-second-project main__container-project-global--active main__container-second-project--active">
+                <img className="main__projet-image main__projet-image--active" src={noPicture} width={220} height={180} alt="travel-agency project"/>
+                <div className="main__projet-text-container main__projet-text-container--active">
+                  <a className="main__link-style main__link-style--active" href="https://github.com/osneyrilxee/travel-agency.git" target="_blank">Travel Agency - Project</a><br></br>
+                  <br></br>
+                  <p>This project is in building process for learning <a href="https://developer.mozilla.org/docs/Glossary/Python" target='_blank' className="informations-color-type--active">Python</a>, 
+                    and that is muddle with some <a href="https://www.rust-lang.org/" target='_blank' className="informations-color-type--active">Rust</a> up 
+                    for <a href="https://en.wikipedia.org/wiki/Graphical_user_interface" target='_blank' className="informations-color-type--active">GUI</a>. 
+                    For the end will appears some <a href="https://vuejs.org/" target='_blank' className="informations-color-type--active">Vue.js</a></p>
+                </div>
+              
+              </div>
+
+              <div className="main__container-third-project main__container-project-global--active main__container-third-project--active">
+                <img className="main__projet-image main__projet-image--active" src={noPicture} width={220} height={180} alt="shadow-wolf project"/>
+                <div className="main__projet-text-container main__projet-text-container--active">
+                  <a className="main__link-style main__link-style--active" href="https://github.com/osneyrilxee/travel-agency.git" target="_blank">Shadow Wolf - Project</a><br></br>
+                  <br></br>
+                  <p>This project is in building process as well and isn't still online technically, my co-worker work on it as well.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="main-section-my-stack" className="main__my-stack-container main__my-stack-container--active">
+            <h2>my stack.</h2>
+            {/* <div className="main__contact-list-container main__contact-list-container--active"> */}
+              <ul className="main__my-stack-list main__my-stack-list--active">
+                <h3>FRONTEND</h3>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={htmlSvgLogo} width={40}></img><p>HTML</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={cssSvgLogo} width={40}></img><p>CSS</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={pythonSvgLogo} width={40}></img><p>Python</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={reactSvgLogo} width={40}></img><p>React</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={nextSvgLogo} width={40}></img><p>Next.js</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={viteSvgLogo} width={40}></img><p>Vite.js</p></li>
+              </ul>
+              <ul className="main__my-stack-list main__my-stack-list--active">
+                <h3>TOOLS</h3><br></br>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={gitSvgLogo} width={40}></img><p>Git</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={githubSvgLogo} width={40}></img><p>GitHub</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={vscodeSvgLogo} width={40}></img><p>VSCODE</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={npmSvgLogo} width={40}></img><p>NPM</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={pnpmSvgLogo} width={40}></img><p>PNPM</p></li>
+              </ul>
+              <ul className="main__my-stack-list main__my-stack-list--active">
+                <h3>STUDYING</h3>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={reactSvgLogo} width={40}></img><p>React</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={nextSvgLogo} width={40}></img><p>Next.js</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={viteSvgLogo} width={40}></img><p>Vite.js</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={rustSvgLogo} width={40}></img><p>Rust</p></li>
+                <li className="main__my_stack-list-global-image-text main__my_stack-list-global-image-text--active"><img src={javascriptSvgLogo} width={40}></img><p>JavaScript</p></li>
+              </ul>
+          </section>
+
+          <a id="tests" href="mailto:rilxee.contact.pro@gmail.com">rilxee.contact.pro@gmail.com</a>
+
+        </main>
+
+        <footer>
+          <section className="footer__credit-container footer__credit-container--active"></section>
+          <p>&copy; 2025 All right reserved <strong>Rilxee JJ</strong></p>
+        </footer>
+
+      </div>
+  )
+}  CSS :root {
+  background-color: rgb(17, 17, 17);
+  color: rgb(117, 117, 117);
+  overflow-x: hidden;
+}
+
+:root a {
+  color: white;
+}
+
+div#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding: 1%;
+  width: 95%;
+  overflow: hidden; /* bloque débordement éventuel */
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+}
+
+.header__list--active {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+  flex-shrink: 1;
+}
+
+.header__list-item--active a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+}
+
+.header__list-item--hover a:hover {
+  color: aliceblue;
+}
+
+/* !!! OUT OF CONTAINER H1 !!! */
+
+#text-information {
+  display: inline-block;
+  white-space: nowrap;  
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  position: relative; /* nécessaire pour left/right */
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-450%); /* commence à droite */
+  }
+  100% {
+    transform: translateX(480%); /* finit complètement à gauche */
+  }
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* gap: 2em; */
+  /* border: 1px solid rgb(68, 68, 68); */
+}
+
+/* ************ welcoming ************ */
+
+.main__welcoming-profil--active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.main__welcoming-profil-social-detail--active {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#main-profile-picture {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 5em;
+  text-align: center;
+  background-color: rgb(31, 31, 31);
+  width: 100%;
+  /* position: relative;
+  animation: slowmode 5s ease reverse; */
+}
+
+@keyframes slowmode {
+  from { left: 0px; }
+  to { left: 300px; }
+}
+
+.main__section-welcoming--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__section-welcoming-text--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1em;
+  gap: 1em;
+  padding: 5em 0 10em 0;
+  background-color: rgb(17, 17, 17);
+}
+
+#section-welcoming-text--active {
+  padding: 1em;
+  font-size: 3em;
+}
+
+.main__welcoming-text--active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
+  border: 1px solid aliceblue;
+  border-radius: 25px;
+  padding: 1em;
+}
+
+.informations-color-type--active {
+  color: white;
+}
+
+a.informations-color-type--active {
+  text-decoration: none;
+}
+
+a.informations-color-type--active:hover {
+  text-decoration: underline;
+}
+
+/* ************ project ************ */
+
+.main__container-project--active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding: 8.5em 0;
+}
+
+.main__container-project-global--active {
+  background-color: rgba(27, 27, 27, 0.582);
+  border: 1px solid aliceblue;
+  border-radius: 25px;
+}
+
+.main__container-project-global--active {
+  width: 300px;
+}
+
+.main__projet-image--active {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.main__projet-text-container--active {
+  padding: 1em;
+}
+
+.main__link-style--active {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.main__link-style--active:hover {
+  color: white;
+}
+
+
+/* ************ my stack ************ */
+
+.main__my-stack-container--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__my-stack-list--active {
+  display: flex;
+  padding: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+  width: 60%;
+  list-style: none;
+}
+
+.main__my-stack-list--active li {
+  display: flex;
+  flex-direction: row;
+}
+
+.main__my-stack-list--active li {
+  display: flex;
+  gap: 10px;
+}
+
+.main__my_stack-list-global-image-text--active {
+  display: flex;
+  align-items: center;
+}
+
+.main__my-stack-list-style--active {
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.main__my-stack-list-style--active:hover {
+  color: aliceblue;
+}
+
+/* outside a container */
+
+#tests {
+  color: white;
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  padding: 2em;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  width: 100%;
+}
+
+/* ---------- RESPONSIVE SPECICATIONS RULES ---------- */
+
+@media (prefers-color-scheme: black) {
+  :root {
+  background-color: rgb(10, 10, 10);
+  color: rgb(85, 85, 85);
+  }
+  a:hover {
+    color: aliceblue;
+  }
+  button {
+    background-color: rgb(10, 10, 10);
+  }
+}
+
+/* verification need */
+
+
+----------------------------------------------------------
+/* TO EDITED IN FIRST */
+
+#tests {
+  color: white;
+  text-align: center;
+}
+
+#tests:after {
+  color: white;
+}
+
+export default App 
